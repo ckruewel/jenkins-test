@@ -4,6 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'mvn --version'
+                sh './mvnw package -Dquarkus.package.type=uber-jar'
             }
         }
     }
